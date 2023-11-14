@@ -1,10 +1,11 @@
-function factorialize(num) {
-  if (num < 0) 
-        return -1;
-  else if (num == 0) 
-      return 1;
-  else {
-      return (num * factorialize(num - 1));
+function recursiveFactorize(number){
+  if(number < 0){
+    return -1
+  } else if(number == 0){
+    return 1
+  } else{
+    return (number * recursiveFactorize(number -1))
   }
 }
-console.log(factorialize(5))
+
+console.log(recursiveFactorize(5))

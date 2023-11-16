@@ -1,24 +1,25 @@
-let array = [1,2,3,4,5]
-array.forEach((element) => {
-  console.log(element)
-})
+// I understood that in this exercise I need to exclude odd numbers and return the array without them. But that wasn't clear, so I made two functions. One returns only even numbers from an array and another that returns only odd numbers.
 
-array.forEach((element, index)=>{
-  console.log(`${element} is in position ${index}`)
-})
+function filterOdd(array){
+  let noOdds = []
+  array.forEach((number)=>{
+    if(number% 2 == 0){
+      noOdds.push(number)
+    }
+  })
+  return noOdds
+}
 
-array.forEach((element, index, array)=>{
-  console.log(`${element} is in position ${index} and makes part of the array ${array}`)
-})
+function filterEven(array){
+  let noEven = []
+  array.forEach((number)=>{
+    if(number % 2 != 0){
+      noEven.push(number)
+    }
+  })
+  return noEven
+}
 
-// using array of objects 
-let arrayObjects = [{name: 'Pam'}, {name: 'Paul'}, {name: 'Peter'}, {age: 21}]
-
-// because we are accessing an object by object in this array, we need to describe which property we want to access too. Otherwise it going to show 'object Object'
-// of course, all the objects need to have the same key to be accessed, or it going to return 'undefined' on the one that doesn't have it. 
-arrayObjects.forEach((element)=>{
-  console.log(`current element ${element}`)
-})
-arrayObjects.forEach((element)=>{
-  console.log(`current element ${element.name}`)
-})
+let array = [1,2,3,4]
+console.log(filterOdd(array))
+console.log(filterEven(array))

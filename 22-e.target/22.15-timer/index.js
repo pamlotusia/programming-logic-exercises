@@ -1,12 +1,20 @@
-const table = document.querySelector('table')
-const btn = document.querySelector('button')
+let timerInterval
+let seconds = 0
 
-btn.addEventListener('click', () => {
-  let row = document.createElement('tr')
-  table.appendChild(row)
-  for (let i = 0; i < 6; i++) {
-    let cell = document.createElement('td')
-    cell.textContent = 10
-    row.appendChild(cell)
+document.body.addEventListener('click', (e)=>{
+  if(e.target.tagName === 'BUTTON'){
+    startTimer()
   }
 })
+
+function startTimer(){
+  if(!timerInterval){
+    timerInterval = setInterval(updateTimer, 1000)
+  }
+}
+
+function updateTimer(){
+  seconds++
+  console.log(`${seconds}`)
+}
+

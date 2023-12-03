@@ -8,10 +8,16 @@ let creatingWord = document.querySelector('#word')
 let arrayCreatingWord = creatingWord.textContent.split('')
 
 // word chosen
-const word = 'palavra'
+const word = 'morning'
 hiddenWord.textContent = word
-// hiddenWord.style.visibility = 'hidden'
+hiddenWord.style.visibility = 'hidden'
 let arrayWord = word.split('')
+
+// styling with underscore
+for (let i = 0; i < arrayWord.length; i++) {
+  arrayCreatingWord.push('_ ')
+}
+creatingWord.textContent = arrayCreatingWord.join('')
 
 // board game
 table.addEventListener('click', function (event) {
@@ -35,17 +41,15 @@ table.addEventListener('click', function (event) {
       creatingWord.textContent = showWord
 
       if (creatingWord.textContent === word) {
-        alert(`Você ganhou! A palavra é ${word}`)
+        alert(`You won! The word is ${word}`)
       }
-      
     } else {
       scoreNumber++
       score.textContent = scoreNumber
       changesNumber--
       changes.textContent = changesNumber
       if (scoreNumber == 6) {
-        alert(`Você perdeu. A palavra era ${word}`)
-        
+        alert(`You loose. The word was ${word}`)
       }
     }
   }

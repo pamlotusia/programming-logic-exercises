@@ -1,12 +1,14 @@
-const table = document.querySelector('table')
-const btn = document.querySelector('button')
+let message = document.querySelector('#message')
+console.log(message)
+let count = 0
 
-btn.addEventListener('click', () => {
-  let row = document.createElement('tr')
-  table.appendChild(row)
-  for (let i = 0; i < 6; i++) {
-    let cell = document.createElement('td')
-    cell.textContent = 10
-    row.appendChild(cell)
+document.body.addEventListener('click', (event)=>{
+  if(event.target.tagName === 'BUTTON'){
+    if(count > 0){
+      message.textContent = `The button has already been clicked ${count} times.`
+    } else {
+      message.textContent = `Its's the first click in this button`
+    }
+    count++
   }
 })

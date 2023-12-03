@@ -1,7 +1,10 @@
-let table = document.querySelectorAll('table *')
+let table = document.querySelector('table')
 
-table.forEach((item)=>{
-  item.addEventListener('click', (e)=>{
-    console.log(e)
-  })
+table.addEventListener('click', function(event){
+  if(event.target.tagName === 'TD'){
+    const rowIndex = event.target.parentElement.rowIndex
+    const cellIndex = event.target.cellIndex
+
+    console.log(`Célula clicada na linha ${rowIndex+1}, coluna${cellIndex+1}`)
+  }
 })

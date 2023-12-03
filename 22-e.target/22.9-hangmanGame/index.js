@@ -17,27 +17,36 @@ let arrayWord = word.split('')
 table.addEventListener('click', function (event) {
   let letter = event.target.textContent
   if (event.target.tagName === 'TD') {
+    let foundIndexes = []
 
+    // Find all occurrences of the letter in the hidden word
+    arrayWord.forEach((char, index) => {
+      if (char == letter) {
+        foundIndexes.push(index)
+      }
+    })
 
-    if (arrayWord.includes(letter)) {
-
-      let index = arrayWord.indexOf(letter)
-      arrayCreatingWord.splice(index, 0, letter)
+    if (foundIndexes.length > 0) {
+      foundIndexes.forEach(index => {
+        arrayCreatingWord[index] = letter
+      })
 
       let showWord = arrayCreatingWord.join('')
       creatingWord.textContent = showWord
 
-      console.log(showWord)
+      if (creatingWord.textContent === word) {
+        alert(`Você ganhou! A palavra é ${word}`)
+      }
+      
     } else {
       scoreNumber++
       score.textContent = scoreNumber
       changesNumber--
       changes.textContent = changesNumber
       if (scoreNumber == 6) {
-        alert('voce perdeu')
+        alert(`Você perdeu. A palavra era ${word}`)
+        
       }
-
-      console.log(scoreNumber)
     }
   }
 })

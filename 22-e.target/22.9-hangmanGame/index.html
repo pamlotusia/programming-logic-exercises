@@ -4,20 +4,66 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <style>
+      table{
+        border-collapse: collapse;
+      }
+      td{
+        border: 1px solid black;
+        padding: 10px;
+        cursor: pointer;
+        text-align: center;
+      }
+    </style>
   </head>
 
   <body>
     <h1>Event: Target property - ninth exercise</h1>
     <p>Develop a simple hangman game. Create a hidden word and allow the player to click on letters to guess the word. Use event.target to identify which letter was clicked.</p>
     <br />
-    <ul>
-      <li>item 1</li>
-      <li>item 2</li>
-      <li>item 3</li>
-      <li>item 4</li>
-      <li>item 5</li>
-    </ul>
-    
+    <p id="hidden-word"></p>
+    <br>
+    <p id="score">mistakes: <span>0</span></p>
+    <p id="changes">You still have <span>6</span> chances</p>
+    <br>
+    <p id="word"></p>
+
+    <table>
+      <tr>
+        <td>a</td>
+        <td>b</td>
+        <td>c</td>
+        <td>d</td>
+        <td>e</td>
+        <td>f</td>
+        <td>g</td>
+      </tr>
+      <tr>
+        <td>h</td>
+        <td>i</td>
+        <td>j</td>
+        <td>k</td>
+        <td>l</td>
+        <td>m</td>
+        <td>n</td>
+      </tr>
+      <tr>
+        <td>o</td>
+        <td>p</td>
+        <td>q</td>
+        <td>r</td>
+        <td>s</td>
+        <td>t</td>
+        <td>u</td>
+      </tr>
+      <tr>
+        <td>v</td>
+        <td>w</td>
+        <td>x</td>
+        <td>y</td>
+        <td>z</td>
+      </tr>
+    </table>
     <script src="index.js"></script>
   </body>
 </html>

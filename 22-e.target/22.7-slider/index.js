@@ -1,7 +1,11 @@
-const ul = document.querySelectorAll('ul *')
+let slider = document.querySelector('input')
 
-ul.forEach((item)=>{
-  item.addEventListener('click', (e)=>{
-    console.log(e.target.textContent)
-  })
+function show(element){
+  let content = element.value
+  console.log(content)
+}
+
+
+slider.addEventListener('touchend', ()=>{
+  show(slider)
 })

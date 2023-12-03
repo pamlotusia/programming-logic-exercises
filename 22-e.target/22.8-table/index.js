@@ -1,7 +1,7 @@
-const ul = document.querySelectorAll('ul *')
+let table = document.querySelectorAll('table *')
 
-ul.forEach((item)=>{
+table.forEach((item)=>{
   item.addEventListener('click', (e)=>{
-    console.log(e.target.textContent)
+    console.log(e)
   })
 })

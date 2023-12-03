@@ -1,12 +1,7 @@
-const table = document.querySelector('table')
-const btn = document.querySelector('button')
+const ol = document.querySelector('ol')
 
-btn.addEventListener('click', () => {
-  let row = document.createElement('tr')
-  table.appendChild(row)
-  for (let i = 0; i < 6; i++) {
-    let cell = document.createElement('td')
-    cell.textContent = 10
-    row.appendChild(cell)
-  }
-})
+function changeColor(event){
+  event.target.style.backgroundColor = 'red'
+}
+
+ol.addEventListener('click', changeColor)

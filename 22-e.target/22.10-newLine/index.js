@@ -1,7 +1,12 @@
-const ul = document.querySelectorAll('ul *')
+const table = document.querySelector('table')
+const btn = document.querySelector('button')
 
-ul.forEach((item)=>{
-  item.addEventListener('click', (e)=>{
-    console.log(e.target.textContent)
-  })
+btn.addEventListener('click', () => {
+  let row = document.createElement('tr')
+  table.appendChild(row)
+  for (let i = 0; i < 6; i++) {
+    let cell = document.createElement('td')
+    cell.textContent = 10
+    row.appendChild(cell)
+  }
 })

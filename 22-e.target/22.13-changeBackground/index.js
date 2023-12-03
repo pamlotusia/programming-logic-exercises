@@ -1,7 +1,13 @@
-const ol = document.querySelector('ol')
+const ol = document.querySelectorAll('ol *')
 
-function changeColor(event){
-  event.target.style.backgroundColor = 'red'
-}
+ol.forEach((item)=>{
+  item.addEventListener('click', changeColor)
 
-ol.addEventListener('click', changeColor)
+  function changeColor(e){
+    ol.forEach((item)=>{
+      item.classList.remove('ativo')
+    })
+    e.target.classList.add('ativo')
+  }
+  
+})

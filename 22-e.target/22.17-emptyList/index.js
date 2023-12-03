@@ -1,12 +1,16 @@
-const table = document.querySelector('table')
+const ul = document.querySelector('ul')
 const btn = document.querySelector('button')
+const input = document.querySelector('input')
 
-btn.addEventListener('click', () => {
-  let row = document.createElement('tr')
-  table.appendChild(row)
-  for (let i = 0; i < 6; i++) {
-    let cell = document.createElement('td')
-    cell.textContent = 10
-    row.appendChild(cell)
+document.body.addEventListener('click', (e)=>{
+  if(e.target.tagName === 'BUTTON'){
+    addItem()
   }
 })
+
+function addItem(){
+  let value = input.value
+  let item = document.createElement('li')
+  item.textContent = value
+  ul.appendChild(item)
+}

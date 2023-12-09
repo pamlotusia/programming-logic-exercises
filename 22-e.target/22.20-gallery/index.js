@@ -1,12 +1,14 @@
-const table = document.querySelector('table')
-const btn = document.querySelector('button')
+let images = document.querySelectorAll('img')
 
-btn.addEventListener('click', () => {
-  let row = document.createElement('tr')
-  table.appendChild(row)
-  for (let i = 0; i < 6; i++) {
-    let cell = document.createElement('td')
-    cell.textContent = 10
-    row.appendChild(cell)
+document.body.addEventListener("click", (e)=>{
+  if(e.target.tagName === 'IMG'){
+    openImage(e.target)
   }
 })
+
+function openImage(image){
+  images.forEach((img)=>{
+    img.classList.remove('ativo')
+  })
+  image.classList.add('ativo')
+}

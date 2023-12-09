@@ -1,3 +1,18 @@
+document.body.addEventListener('click', (e)=>{
+  // only the event
+  console.log(e)
+  // the element which receives the event
+  console.log(e.target)
+  // throw the target, you can access the properties from the element
+  console.log(e.target.tagName)
+  // list of style rules, but you can not access specify style properties 
+  console.log(e.target.style)
+  // it does not work
+  console.log(e.target.style.color)
+  // but you can specify a style property to change it or use it in a conditional 
+  console.log(e.target.style.color = 'yellow')
+})
+
 // make a list
 const ul = document.createElement('ul')
 document.body.appendChild(ul)

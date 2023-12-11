@@ -1,1 +1,3 @@
-const numbers = [1,2,3,4,6]
+const uppercase = ['HELLO', 'GOOD', 'OF COURSE']
+const lowcase = uppercase.map((word)=> word.toLowerCase())
+console.log(lowcase)

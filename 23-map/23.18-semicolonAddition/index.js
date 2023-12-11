@@ -1,1 +1,3 @@
-const numbers = [1,2,3,4,6]
+const phrases = ['a', 'busy', 'bee']
+const semicolon = phrases.map((sentence) => sentence.concat(';'))
+console.log(semicolon)

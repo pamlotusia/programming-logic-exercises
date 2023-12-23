@@ -60,7 +60,6 @@ function filterItems(arr, query) {
 console.log(filterItems(fruits, 'ap')) // ['apple', 'grapes']
 console.log(filterItems(fruits, 'an')) // ['banana', 'mango', 'orange']
 
-
 // **********************************
 // Using the third argument of callbackFn
 // The array argument is useful if you want to access another element in the array, especially when you don't have an existing variable that refers to the array. The following example first uses map() to extract the numerical ID from each name and then uses filter() to select the ones that are greater than its neighbors.
@@ -77,23 +76,21 @@ const greatIDs = names
   })
 console.log(greatIDs) // [132, 96]
 
-
 // **********************************
 // Using filter() on sparse arrays
 // filter() will skip empty slots.
-console.log([1, , undefined].filter((x) => x === undefined)); // [undefined]
-console.log([1, , undefined].filter((x) => x !== 2)); // [1, undefined]
-
+console.log([1, , undefined].filter(x => x === undefined)) // [undefined]
+console.log([1, , undefined].filter(x => x !== 2)) // [1, undefined]
 
 // **********************************
 // Calling filter() on non-array objects
 // The filter() method reads the length property of this and then accesses each property whose key is a nonnegative integer less than length.
 const arrayLike = {
   length: 3,
-  0: "a",
-  1: "b",
-  2: "c",
-  3: "a", // ignored by filter() since length is 3
-};
-console.log(Array.prototype.filter.call(arrayLike, (x) => x <= "b"));
+  0: 'a',
+  1: 'b',
+  2: 'c',
+  3: 'a' // ignored by filter() since length is 3
+}
+console.log(Array.prototype.filter.call(arrayLike, x => x <= 'b'))
 // [ 'a', 'b' ]

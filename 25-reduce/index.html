@@ -13,6 +13,9 @@
     
     <p><i>Syntax: </i>reduce(callbackFn)</p>
     <p><i>Syntax: </i>reduce(callbackFn, initialValue)</p>
+    <p><i>Syntax: </i>array.reduce(callback(accumulator, currentValue[,index[,array]])[,initialValue])</p>
+    <p><strong>Pay attention: </strong><i>The 'accumulator' and 'currentValue' parameters are mandatory, so the others are optional and will only be declared if necessary.</i></p>
+    <p><strong>Pay attention: </strong>By adding the 'initialValue' as a parameter of the callbackFn, this changes the functioning of the method, so that without the 'initialValue' the sequence would be: in the first iteration, index 0 of the array takes the position of accumulator and the index 1 takes the place of current value. That is, in an array with 5 items, there will be 4 iterations. However, if the 'initialValue' is declared as a parameter of the callbackFn, the array with 5 items will have 5 iterations, because the 'initialValue' takes the place of the accumulator and thus the loop rotates normally.</p>
     <script src="index.js"></script>
   </body>
 </html>

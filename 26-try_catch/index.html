@@ -30,9 +30,9 @@
     <ul>
       <li><strong>Error</strong>:Creates a generic error, you can put a message. Like: throw new Error("An error was found here.")</li>
       <li><strong>RangeError</strong>:Creates an instance representing an error that occurs when a numeric variable or parameter is outside its valid range.</li>
-      <li><strong>ReferenceError</strong>:Creates an instance representing an error that occurs when de-referencing an invalid reference.</li>
+      <li><strong>ReferenceError</strong>:Creates an instance representing an error that occurs when de-referencing an invalid reference. <strong>Example: console.log(test) -> if test wasn't declared yet(even without value), it doesn't exist and the ReferenceError will happen.</strong></li>
       <li><strong>SyntaxError</strong>:Creates an instance representing a syntax error.</li>
-      <li><strong>TypeError</strong>:Creates an instance representing an error that occurs when a variable or parameter is not of a valid type.</li>
+      <li><strong>TypeError</strong>:Creates an instance representing an error that occurs when a variable or parameter is not of a valid type. <strong>Example: 1.toUppercase() -> the toUppercase method is only t Strings, not for numbers as the number 1 in the example.</strong></li>
       
     </ul>
   <script src="index.js"></script>  

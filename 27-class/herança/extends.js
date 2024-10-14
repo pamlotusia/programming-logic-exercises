@@ -11,8 +11,9 @@ class Animal{
 }
 
 class Cachorro extends Animal{
+  //aqui extendemos a classe Animal e sobreescrevemos seu metodo.
   falar(){
-    console.log(`${this.nome} ladidos`)
+    console.log(`${this.nome} late.`)
   }
 }
 

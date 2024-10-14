@@ -15,5 +15,19 @@ class Cachorro extends Animal {
   }
 }
 
+class Gato extends Animal{
+  constructor(nome, barulho){
+    super(nome)
+
+    this.barulho = barulho
+  }
+
+  falar(){
+    console.log(`${this.nome} faz ${this.barulho}`)
+  }
+}
+
 let cachorro = new Cachorro('miky')
 cachorro.falar()
+let gato = new Gato('chico', 'miau')
+gato.falar()
